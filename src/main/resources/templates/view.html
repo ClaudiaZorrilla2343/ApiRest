@@ -21,6 +21,7 @@
             <td th:text="${user.username}"></td>
             <td th:text="${user.email}"></td>
             <td th:text="${user.priority}"></td>
+            <td><a th:href="@{/delete/} + ${user.id}" th:text="Delete"></a></td>
         </tr>
         </tbody>
     </table>
