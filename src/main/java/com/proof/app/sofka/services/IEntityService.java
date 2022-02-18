@@ -3,9 +3,10 @@ package com.proof.app.sofka.services;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+/**
+ *Rellenar clase servicio, para implementar los metodos crud
+ */
 
-@Service
-//Rellenar clase servicio, para implementar los metodos crud
 public interface IEntityService<T> {
 
     List<T> findAll();

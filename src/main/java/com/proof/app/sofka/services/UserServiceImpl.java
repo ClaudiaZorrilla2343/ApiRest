@@ -3,9 +3,10 @@ package com.proof.app.sofka.services;
 import com.proof.app.sofka.models.dao.IUserDao;
 import com.proof.app.sofka.models.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class UserServiceImpl implements IEntityService<User>{
 
     @Autowired

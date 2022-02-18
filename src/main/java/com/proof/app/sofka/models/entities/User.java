@@ -7,22 +7,32 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity(name = "USERS")
-//setters y getters
+/**
+ *construye los setters y getters
+ */
 @Getter
 @Setter
-//Identificador
+/**
+ *Identificador
+ */
 public class User implements Serializable {
-    //Agregamos etiquetas
+    /**
+     *Agregamos etiquetas
+     */
     @Id
-    //Notación para que se vaya incrementando
+    /**
+     * Notación para que se vaya incrementando
+     */
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //nombre que va obtener la BD
+    /**
+     * nombre que va obtener la BD
+     */
     @Column(name = "ID", unique = true, nullable = false, updatable = true)
 
     private long id;
-    private String nombre;
+    private String username;
     private String email;
-    private Integer prioridad;
+    private Integer priority;
 
 
 }
