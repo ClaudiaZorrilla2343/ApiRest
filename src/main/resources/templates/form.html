@@ -5,6 +5,10 @@
     <title th:text="${tittle}"></title>
 </head>
 <body>
+<!--
+Aquí se crea el formulario que esta mapeado con la respuesta post en el controlador,
+llamando al objeto usuario y utilizando sus campos en los inputs
+-->
 <div>
     <form th:action="@{/form}" th:object="${user}" method="post">
         <ul>

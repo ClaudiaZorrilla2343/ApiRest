@@ -16,6 +16,11 @@
         </tr>
         </thead>
         <tbody>
+
+        <!--
+        Aquí se esta utilizando la dependencia thymeleaf creando un bucle para
+        recorrer todos los usuarios que se envian desde el model en el controlador.
+        -->
         <tr th:each="user: ${users}">
             <td th:text="${user.id}"></td>
             <td th:text="${user.username}"></td>

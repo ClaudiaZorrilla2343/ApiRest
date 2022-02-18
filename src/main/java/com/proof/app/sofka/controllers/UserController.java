@@ -39,7 +39,10 @@ public class UserController {
         model.addAttribute("tittle", "Create User");
         return "form";
     }
-
+/**
+ *Con este metodo cuando haya una respuesta post ya sea por medio del apiRest que infiere en postman o por un formulario
+ * que inserte y se mape con los datos del usuario
+ */
     @PostMapping("/form")
     public String form(@Valid User user, BindingResult bindingResult, Model model, SessionStatus status) {
         if(bindingResult.hasErrors()) {
@@ -63,7 +66,4 @@ public class UserController {
         model.addAttribute("users", users);
         return "view";
     }
-
-
-
 }
