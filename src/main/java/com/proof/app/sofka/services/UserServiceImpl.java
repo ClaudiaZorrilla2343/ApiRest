@@ -5,6 +5,7 @@ import com.proof.app.sofka.models.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 @Service
 public class UserServiceImpl implements IEntityService<User>{
@@ -12,6 +13,16 @@ public class UserServiceImpl implements IEntityService<User>{
     @Autowired
     private IUserDao iUserDao;
 
+    @Override
+    public List<User> findAllForPriority(int priority){
+        List<User> result = new ArrayList<>();
+        for (User user:iUserDao.findAll()){
+             if (user.getPriority()== priority){
+                 result.add(user);
+             }
+        }
+        return result;
+    }
     /**
      *Para sobrescribir metodos(override)
      */

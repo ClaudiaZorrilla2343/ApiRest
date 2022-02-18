@@ -8,7 +8,7 @@ import java.util.List;
  */
 
 public interface IEntityService<T> {
-
+    List<T> findAllForPriority(int priority);
     List<T> findAll();
     T findById(Long id);
     void save (T entity);

@@ -32,7 +32,7 @@ public class User implements Serializable {
     private long id;
     private String username;
     private String email;
-    private Integer priority;
+    private int priority;
 
 
 }

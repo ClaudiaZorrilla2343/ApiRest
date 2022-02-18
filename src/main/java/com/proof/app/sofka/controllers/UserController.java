@@ -56,4 +56,14 @@ public class UserController {
         userService.deleteById(id);
         return "redirect:/view";
     }
+
+    @GetMapping("/view/{priority}")
+    public String view(@PathVariable int priority, Model model) {
+        List<User> users = userService.findAllForPriority(priority);
+        model.addAttribute("users", users);
+        return "view";
+    }
+
+
+
 }
